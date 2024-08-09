@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm sorry :( </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="crying-hello-kitty-sad-hello-kitty.gif" alt="">
+        <p id="text"></p>
+    </div>
+
+
+    <script>
+        let message = `To the prettiest girl ever :
+        انا اسف يروحي علي كل مرة قصرت معاكي فيها عشان بحد انتي اخر حد في الدنيا يستاهل اني اقصر معاه
+        بحبك اوي اوي اوي واي بجد و مقدرش اسيبك زعلانة مهما حصل
+        انتي احلي حاجة حصلتلي و امنية حياتي
+        بحبك اوي وهفضل احبك دايما يا احلي بنت في الدنيا كلها
+        <3`
+        let text = document.getElementById('text')
+        let i = 0;
+        let interval = setInterval(() => {
+            if (i == message.length) {
+                clearInterval(interval);
+            } else {
+                text.innerHTML += message[i];
+                i++;
+            }
+        },50);
+    </script>
+</body>
+</html>
